@@ -1,4 +1,5 @@
-class Coordinates {
+package breakout.etc;
+public class Coordinates {
     private int _cordX;
     private int _cordY;
     public Coordinates(int x, int y){
