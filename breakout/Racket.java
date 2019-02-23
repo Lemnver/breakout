@@ -1,7 +1,8 @@
 package breakout;
 import breakout.etc.*;
-public class Racket extends Rectangle implements {
+public class Racket extends Actor {
 
-    public (){
+    public Racket(Coordinates coordinates, int height, int width){
+        super(coordinates, height, width);
     }
 }
