@@ -1,9 +1,9 @@
 package breakout.etc;
-class Actor extends Rectangle implements Moveable, Collideable {
+abstract class Actor extends Rectangle implements Moveable, Collideable {
 
     public void move(Coordinates new_coords){
+        _coords.setX(new_coords.getX);
+        _coords.setY(new_coords.getY);
     }
-    public boolean isCollision(Coordinates coord){
-        return false;
-    }
+    public boolean isCollision(Coordinates coord){}
 }
