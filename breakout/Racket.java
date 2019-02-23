@@ -1,6 +1,6 @@
 package breakout;
 import breakout.etc.*;
-public class () extends implements {
+public class Racket extends Rectangle implements {
 
     public (){
     }
