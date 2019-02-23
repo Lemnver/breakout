@@ -12,4 +12,10 @@ public class Coordinates {
     public int getY(){
         return _cordY;
     }
+    public void setX(int x){
+        _cordX = x;
+    }
+    public void setY(int y){
+        _cordY = y;
+    }
 }
