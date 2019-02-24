@@ -35,7 +35,6 @@ public class Ball extends Actor {
          this.setY(this.getY()+this._speedY);
     }
 
-
     public void collision(Rectangle opponent){
         // left side
         if (this.getX() == opponent.getX()) {
