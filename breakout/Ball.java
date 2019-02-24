@@ -23,7 +23,6 @@ public class Ball extends Actor {
         flipVerticalSpeed();
     }
 
-
     private void flipVerticalSpeed(){
         _speedY = -1 * _speedY;
     }
@@ -65,18 +64,4 @@ public class Ball extends Actor {
         
     }
 
-    public boolean isCollision(Rectangle opponent){
-        // kod inspirerad från föreläsning 6
-        
-        if (this.getX() + this.getWidth() >= opponent.getX() ||
-        opponent.getX() + opponent.getWidth() >= this.getX()){
-            
-            if (this.getY() + this.getHeight() >= opponent.getY() ||
-            opponent.getY() + opponent.getHeight() >= this.getY()){
-                return true;        
-            }
-        }
-        return false;
-
-    }
 }
