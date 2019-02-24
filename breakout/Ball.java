@@ -30,6 +30,10 @@ public class Ball extends Actor {
     private void flipHorizontalSpeed(){
         _speedX = -1 * _speedX;
     }
+    public void move(){
+         this.setX(this.getX()+this._speedX);
+         this.setY(this.getY()+this._speedY);
+    }
 
 
     public void collision(Rectangle opponent){

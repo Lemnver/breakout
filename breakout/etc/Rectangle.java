@@ -19,6 +19,12 @@ abstract public class Rectangle implements RectangleStruct {
         return this.getCoords().getY();
     }
 
+    public void setX(int x) {
+        this.getCoords().setX(x);
+    }
+    public void setY(int y) {
+        this.getCoords().setY(y);
+    }
     public Rectangle(Coordinates coordinates, int height, int width){
         _coords = coordinates;
         _height = height;
