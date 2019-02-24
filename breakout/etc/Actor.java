@@ -1,5 +1,5 @@
 package breakout.etc;
-abstract class Actor extends Rectangle implements Moveable, Collider {
+abstract public class Actor extends Rectangle implements Moveable, Collider {
 
     public void move(Coordinates new_coords){
         this.getCoords().setX(new_coords.getX());
@@ -15,9 +15,9 @@ abstract class Actor extends Rectangle implements Moveable, Collider {
             }
         }
         return false;
-
     }
-    public Actor (Coordinates coordinates, int height, int width){
-        super(coordinates, height, width);
+    abstract public void collision(Rectangle opponent);
+    public Actor (Coordinates coords, int height, int width){
+        super(coords, height, width);
     }
 }

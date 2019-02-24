@@ -1,3 +1,3 @@
 package breakout.etc;
-abstract class Obstacle extends Rectangle {
+abstract public class Obstacle extends Rectangle {
 }
