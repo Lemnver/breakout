@@ -10,21 +10,63 @@ public class Ball extends Actor {
         _speedX = x_speed;
         _speedY = y_speed;
     }
-    public void leftBounce (){}
-    public void rightBounce (){}
-    public void topBounce (){}
-    public void bottomBounce (){}
+    public void leftBounce (){
+        flipHorizontalSpeed();
+    }
+    public void rightBounce (){
+        flipHorizontalSpeed();
+    }
+    public void topBounce (){
+        flipVerticalSpeed();    
+    }
+    public void bottomBounce (){
+        flipVerticalSpeed();
+    }
+
+
+    private void flipVerticalSpeed(){
+        _speedY = -1 * _speedY;
+    }
+
+    private void flipHorizontalSpeed(){
+        _speedX = -1 * _speedX;
+    }
 
 
     public void collision(Rectangle opponent){
-    
+        // left side
+        if (this.getX() == opponent.getX()) {
+            if (this.getY() + this.getHeight() >= opponent.getY() ||
+            opponent.getY() + opponent.getHeight() >= this.getY()){
+                leftBounce();
+            }
+        }
+        // right side
+        else if (this.getX() + this.getWidth() == opponent.getX()) {
+            if (this.getY() + this.getHeight() >= opponent.getY() ||
+            opponent.getY() + opponent.getHeight() >= this.getY()){
+                rightBounce();
+            }
+        }
+        // top
+        else if (this.getY() == opponent.getY() + opponent.getHeight()){
+            if (this.getX() + this.getWidth() >= opponent.getX() ||
+            opponent.getX() + opponent.getWidth() >= this.getX()){
+                topBounce();
+            }
+        }
+        // bottom
+        else if (this.getY() + this.getHeight() == opponent.getY()){
+            if (this.getX() + this.getWidth() >= opponent.getX() ||
+            opponent.getX() + opponent.getWidth() >= this.getX()){
+                bottomBounce();
+            }
+        }
+        
     }
 
     public boolean isCollision(Rectangle opponent){
         // kod inspirerad från föreläsning 6
-        
-        // check left side
-        if (this.getX() == opponent.getX() ){}
         
         if (this.getX() + this.getWidth() >= opponent.getX() ||
         opponent.getX() + opponent.getWidth() >= this.getX()){
