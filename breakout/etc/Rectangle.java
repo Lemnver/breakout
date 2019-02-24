@@ -1,5 +1,5 @@
 package breakout.etc;
-class Rectangle implements RectangleStruct {
+abstract class Rectangle implements RectangleStruct {
     private Coordinates _coords;
     private int _height;
     private int _width;
@@ -12,6 +12,13 @@ class Rectangle implements RectangleStruct {
     public Coordinates getCoords(){
         return _coords;
     }
+    public int getX() {
+        return this.getCoords().getX();
+    }
+    public int getY() {
+        return this.getCoords().getY();
+    }
+
     public Rectangle(Coordinates coordinates, int height, int width){
         _coords = coordinates;
         _height = height;
