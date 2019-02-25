@@ -1,7 +1,10 @@
 package breakout;
 import breakout.etc.*;
-public class () extends implements {
+public class Wall extends Obstacle {
+    /*  class for walls around the map
+     *
+     */
 
-    public (){
+    public Wall(){
     }
 }

@@ -1,7 +1,10 @@
 package breakout;
 import breakout.etc.*;
-public class () extends implements {
+public class Block extends Obstacle {
+    /*  class for blocks that Ball collides with
+     *
+     */
 
-    public (){
+    public Block(){
     }
 }
