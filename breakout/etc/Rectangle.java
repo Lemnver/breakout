@@ -1,5 +1,9 @@
 package breakout.etc;
-abstract public class Rectangle implements RectangleStruct {
+public class Rectangle implements RectangleStruct {
+    /*  Base class for all rectangles
+     *
+     *
+     * */
     private Coordinates _coords;
     private int _height;
     private int _width;
