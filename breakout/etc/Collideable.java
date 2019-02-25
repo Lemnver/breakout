@@ -1,5 +1,5 @@
 package breakout.etc;
-public interface Collider extends RectangleStruct {
+public interface Collideable extends RectangleStruct {
     /*  interface for colliding rectangles
      *
      */

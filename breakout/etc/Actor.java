@@ -1,5 +1,5 @@
 package breakout.etc;
-abstract public class Actor extends Rectangle implements Moveable, Collider {
+abstract public class Actor extends Rectangle implements Moveable, Collideable {
     /*  abstract base class for all objects that move and collide
      *
      * */
